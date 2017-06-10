@@ -12,7 +12,9 @@ Note: ***Debug version of Lilu.kext should be put in the same folder as BrcmWLFi
 See [Instructions](https://github.com/PMheart/BrcmWLFixup/blob/master/Instructions.md) for more details.
 
 #### Support and discussion
-- TO BE DONE
+- [InsanelyMac topic](http://www.insanelymac.com/forum/topic/324353-brcmwlfixup-wi-fi-whitelist-removal) in English
+- [PCBeta aka 远景论坛](http://bbs.pcbeta.com/viewthread-1745045-1-1.html) in Chinese/中文
+- [GitHub Issues](https://github.com/PMheart/BrcmWLFixup/issues)
 
 #### Credits
 - [Apple](https://www.apple.com) for macOS  
