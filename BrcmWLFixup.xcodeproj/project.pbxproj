@@ -7,23 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		834F43801EE97F60002D3F69 /* kern_api.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 834F43701EE97F60002D3F69 /* kern_api.hpp */; };
-		834F43811EE97F60002D3F69 /* kern_compression.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 834F43711EE97F60002D3F69 /* kern_compression.hpp */; };
-		834F43821EE97F60002D3F69 /* kern_config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 834F43721EE97F60002D3F69 /* kern_config.hpp */; };
-		834F43831EE97F60002D3F69 /* kern_disasm.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 834F43731EE97F60002D3F69 /* kern_disasm.hpp */; };
-		834F43841EE97F60002D3F69 /* kern_file.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 834F43741EE97F60002D3F69 /* kern_file.hpp */; };
-		834F43851EE97F60002D3F69 /* kern_iokit.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 834F43751EE97F60002D3F69 /* kern_iokit.hpp */; };
-		834F43861EE97F60002D3F69 /* kern_mach.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 834F43761EE97F60002D3F69 /* kern_mach.hpp */; };
-		834F43871EE97F60002D3F69 /* kern_patcher.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 834F43771EE97F60002D3F69 /* kern_patcher.hpp */; };
-		834F43881EE97F60002D3F69 /* kern_policy.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 834F43781EE97F60002D3F69 /* kern_policy.hpp */; };
-		834F43891EE97F60002D3F69 /* kern_user.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 834F43791EE97F60002D3F69 /* kern_user.hpp */; };
-		834F438A1EE97F60002D3F69 /* kern_util.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 834F437A1EE97F60002D3F69 /* kern_util.hpp */; };
-		834F438B1EE97F60002D3F69 /* plugin_start.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 834F437B1EE97F60002D3F69 /* plugin_start.hpp */; };
-		834F438C1EE97F60002D3F69 /* LegacyIOService.h in Headers */ = {isa = PBXBuildFile; fileRef = 834F437D1EE97F60002D3F69 /* LegacyIOService.h */; };
 		834F438D1EE97F60002D3F69 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 834F437E1EE97F60002D3F69 /* libkmod.a */; };
 		834F438E1EE97F60002D3F69 /* plugin_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834F437F1EE97F60002D3F69 /* plugin_start.cpp */; };
 		834F43901EE97F8C002D3F69 /* kern_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834F438F1EE97F8C002D3F69 /* kern_start.cpp */; };
 		834F43931EE97FBA002D3F69 /* kern_brcm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834F43911EE97FBA002D3F69 /* kern_brcm.cpp */; };
+		83E5DD171EF1EA870062F788 /* kern_brcm.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 834F43921EE97FBA002D3F69 /* kern_brcm.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,19 +166,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				834F43801EE97F60002D3F69 /* kern_api.hpp in Headers */,
-				834F438B1EE97F60002D3F69 /* plugin_start.hpp in Headers */,
-				834F43881EE97F60002D3F69 /* kern_policy.hpp in Headers */,
-				834F43871EE97F60002D3F69 /* kern_patcher.hpp in Headers */,
-				834F438A1EE97F60002D3F69 /* kern_util.hpp in Headers */,
-				834F43841EE97F60002D3F69 /* kern_file.hpp in Headers */,
-				834F438C1EE97F60002D3F69 /* LegacyIOService.h in Headers */,
-				834F43861EE97F60002D3F69 /* kern_mach.hpp in Headers */,
-				834F43821EE97F60002D3F69 /* kern_config.hpp in Headers */,
-				834F43811EE97F60002D3F69 /* kern_compression.hpp in Headers */,
-				834F43891EE97F60002D3F69 /* kern_user.hpp in Headers */,
-				834F43831EE97F60002D3F69 /* kern_disasm.hpp in Headers */,
-				834F43851EE97F60002D3F69 /* kern_iokit.hpp in Headers */,
+				83E5DD171EF1EA870062F788 /* kern_brcm.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +364,7 @@
 				MODULE_NAME = org.vanilla.driver.BrcmWLFixup;
 				MODULE_START = BrcmWLFixup_kern_start;
 				MODULE_STOP = BrcmWLFixup_kern_stop;
-				MODULE_VERSION = 1.0.0;
+				MODULE_VERSION = 1.0.1;
 				OTHER_CFLAGS = (
 					"-mmmx",
 					"-msse",
@@ -433,7 +409,7 @@
 				MODULE_NAME = org.vanilla.driver.BrcmWLFixup;
 				MODULE_START = BrcmWLFixup_kern_start;
 				MODULE_STOP = BrcmWLFixup_kern_stop;
-				MODULE_VERSION = 1.0.0;
+				MODULE_VERSION = 1.0.1;
 				OTHER_CFLAGS = (
 					"-mmmx",
 					"-msse",

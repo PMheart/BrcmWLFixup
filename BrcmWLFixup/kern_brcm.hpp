@@ -14,7 +14,7 @@ class BRCM {
 public:
   bool init();
   
-private:
+private:  
   /**
    *  Patch kext if needed and prepare other patches
    *

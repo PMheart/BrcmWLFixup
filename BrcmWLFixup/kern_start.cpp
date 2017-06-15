@@ -11,6 +11,27 @@
 
 static BRCM brcm;
 
+// kernel versioning
+static KernelVersion kernMajorVersion;      // from kern_brcm.hpp
+static KernelMinorVersion kernMinorVersion;
+static int sysMajorVersion;
+static int sysMinorVersion;
+
+static void setSystemVersions() {
+  kernMajorVersion = getKernelVersion();
+  sysMajorVersion = kernMajorVersion - 4;
+  
+  kernMinorVersion = getKernelMinorVersion();
+  sysMinorVersion = kernMinorVersion;
+}
+
+static void brcmStart() {
+  setSystemVersions();
+  
+  SYSLOG("brcm @ starting on macOS 10.%d.%d", sysMajorVersion, sysMinorVersion);
+  brcm.init();
+}
+
 static const char *bootargOff[] {
   "-brcmoff"
 };
@@ -20,7 +41,7 @@ static const char *bootargDebug[] {
 };
 
 static const char *bootargBeta[] {
-  "-brcmoff"
+  "-brcmbeta"
 };
 
 PluginConfiguration ADDPR(config)
@@ -39,12 +60,10 @@ PluginConfiguration ADDPR(config)
   bootargBeta,
   sizeof(bootargBeta)/sizeof(bootargBeta[0]),
   
-  // minKernel - 10.8
-  KernelVersion::MountainLion,
+  // minKernel - 10.13
+  KernelVersion::HighSierra,
   // maxKernel - 10.13
   KernelVersion::HighSierra,
   
-  []() {
-    brcm.init();
-  }
+  brcmStart
 };
