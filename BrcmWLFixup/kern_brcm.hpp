@@ -10,6 +10,10 @@
 
 #include <Headers/kern_patcher.hpp>
 
+// get array size, from syscl's repo
+// https://github.com/syscl/EnableLidWake/blob/master/EanbleLidWake/syscl_lib.h#L41
+#define getArrayLength(Array) ((sizeof(Array)/sizeof(0[Array])) / ((size_t)(!(sizeof(Array) % sizeof(0[Array])))))
+
 class BRCM {
 public:
   bool init();
@@ -33,12 +37,12 @@ private:
   /**
    *  Hooked funcs
    */
-  static bool checkBoardId(const char *boardID);
+  static bool myCheckBoardId(const char *boardID);
   
   /**
    *  Trampolines for original method invocations
    */
-  t_check_Board_Id orgCheckBoardId { nullptr };
+  t_check_Board_Id orgCheckBoardId = nullptr;
   
   struct ProcessingState {
     enum {
