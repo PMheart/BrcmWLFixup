@@ -16,6 +16,7 @@
 
 /* Begin PBXFileReference section */
 		83446C0F1EEC502200D36111 /* build.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = build.command; path = Tools/build.command; sourceTree = "<group>"; };
+		834B4CBF1EF553CD0016D5BA /* PrivateAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateAPI.h; sourceTree = "<group>"; };
 		834F43661EE97EEF002D3F69 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		834F43671EE97F09002D3F69 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		834F436A1EE97F2F002D3F69 /* Changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				834F438F1EE97F8C002D3F69 /* kern_start.cpp */,
+				834B4CBF1EF553CD0016D5BA /* PrivateAPI.h */,
 				834F43921EE97FBA002D3F69 /* kern_brcm.hpp */,
 				834F43911EE97FBA002D3F69 /* kern_brcm.cpp */,
 			);

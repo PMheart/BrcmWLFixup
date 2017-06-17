@@ -9,6 +9,7 @@
 #include <Headers/kern_util.hpp>
 
 #include "kern_brcm.hpp"
+#include "PrivateAPI.h"
 
 #define kBrcm4360 0
 #define kBrcmNIC  1
