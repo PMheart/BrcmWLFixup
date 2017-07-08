@@ -82,8 +82,6 @@ void BRCM::processKext(KernelPatcher &patcher, size_t index, mach_vm_address_t a
     for (size_t i = 0; i < kextListSize; i++) {
       if (kextList[i].loadIndex == index) {
         // patch AirPortBrcm4360
-        // Note: AirPortBrcm4360 is being obsolete under 10.13,
-        //       once it gets deprecated, then we'll remove this support
         if (!strcmp(kextList[i].id, idList[kBrcm4360])) {
           DBGLOG("brcm @ found %s", idList[kBrcm4360]);
           auto check_Board_Id = patcher.solveSymbol(index, symbolList[kBrcm4360]);
