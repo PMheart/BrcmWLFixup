@@ -52,13 +52,13 @@ PluginConfiguration ADDPR(config)
   parseModuleVersion(xStringify(MODULE_VERSION)),
   
   bootargOff,
-  sizeof(bootargOff)/sizeof(bootargOff[0]),
+  arrsize(bootargOff),
   
   bootargDebug,
-  sizeof(bootargDebug)/sizeof(bootargDebug[0]),
+  arrsize(bootargDebug),
   
   bootargBeta,
-  sizeof(bootargBeta)/sizeof(bootargBeta[0]),
+  arrsize(bootargBeta),
   
   // minKernel - 10.13
   KernelVersion::HighSierra,
