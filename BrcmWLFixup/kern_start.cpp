@@ -60,8 +60,8 @@ PluginConfiguration ADDPR(config)
   bootargBeta,
   arrsize(bootargBeta),
   
-  // minKernel - 10.13
-  KernelVersion::HighSierra,
+  // minKernel - 10.9
+  KernelVersion::Mavericks,
   // maxKernel - 10.13
   KernelVersion::HighSierra,
   

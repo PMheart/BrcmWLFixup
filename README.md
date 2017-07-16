@@ -4,7 +4,7 @@ BrcmWLFixup
 A [Lilu](https://github.com/vit9696/Lilu) plug-in kernel extension which targets at patching some kexts to remove whitelist restrictions.
 
 #### Notes
-This repository should be compiled with [Lilu](https://github.com/vit9696/Lilu) ***v1.1.4*** and greater, otherwise the compilation will be failed!
+This repository should be compiled with [Lilu](https://github.com/vit9696/Lilu) ***v1.1.6*** and greater, otherwise the compilation will be failed!
 
 Note: ***Debug version of Lilu.kext should be put in the same folder as BrcmWLFixup! And they should be also used together!***
 

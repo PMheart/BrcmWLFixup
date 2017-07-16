@@ -42,7 +42,7 @@ static KernelPatcher::KextInfo kextList[] {
   { idList[kBrcmNIC],  &binList[kBrcmNIC],  1, true, {}, KernelPatcher::KextInfo::Unloaded },
   { idList[kBrcmMFG],  &binList[kBrcmMFG],  1, true, {}, KernelPatcher::KextInfo::Unloaded }
 };
-static size_t kextListSize = getArrayLength(kextList);
+static size_t kextListSize = arrsize(kextList);
 
 
 bool BRCM::init() {
