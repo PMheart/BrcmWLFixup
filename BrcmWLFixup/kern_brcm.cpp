@@ -58,11 +58,6 @@ bool BRCM::init() {
     return false;
   }
   
-  if (getKernelVersion() < KernelVersion::HighSierra) {
-    SYSLOG("brcm @ loaded on unsupported macOS: 10.%d.%d", getKernelVersion(), getKernelMinorVersion());
-    return false;
-  }
-  
   return true;
 }
 
