@@ -19,22 +19,22 @@
 static BRCM          *callbackBoardID = nullptr;
 static KernelPatcher *callbackPatcher = nullptr;
 
-static const char *idList[] {
-  "com.apple.driver.AirPort.Brcm4360",
-  "com.apple.driver.AirPort.BrcmNIC",
-  "com.apple.driver.AirPort.BrcmNIC-MFG"
-};
-
 static const char *binList[] {
   "/System/Library/Extensions/IO80211Family.kext/Contents/PlugIns/AirPortBrcm4360.kext/Contents/MacOS/AirPortBrcm4360",
   "/System/Library/Extensions/IO80211Family.kext/Contents/PlugIns/AirPortBrcmNIC.kext/Contents/MacOS/AirPortBrcmNIC",
   "/System/Library/Extensions/AirPortBrcmNIC-MFG.kext/Contents/MacOS/AirPortBrcmNIC-MFG"
 };
 
+static const char *idList[] {
+  "com.apple.driver.AirPort.Brcm4360",    // AirPortBrcm4360
+  "com.apple.driver.AirPort.BrcmNIC",     // AirPortBrcmNIC
+  "com.apple.driver.AirPort.BrcmNIC-MFG"  // AirPortBrcmNIC-MFG
+};
+
 static const char *symbolList[] {
-  "__ZN16AirPort_Brcm436012checkBoardIdEPKc",
-  "__ZN15AirPort_BrcmNIC12checkBoardIdEPKc",
-  "__ZN19AirPort_BrcmNIC_MFG12checkBoardIdEPKc"
+  "__ZN16AirPort_Brcm436012checkBoardIdEPKc",   // AirPortBrcm4360
+  "__ZN15AirPort_BrcmNIC12checkBoardIdEPKc",    // AirPortBrcmNIC
+  "__ZN19AirPort_BrcmNIC_MFG12checkBoardIdEPKc" // AirPortBrcmNIC-MFG
 };
 
 static KernelPatcher::KextInfo kextList[] {
